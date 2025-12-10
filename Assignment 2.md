@@ -22,7 +22,7 @@ Historically, this phenomenon was pivotal because it exposed the limitations of 
 
 To understand the laws governing photoelectricity, a specific experimental setup is required to measure the variation of photocurrent with intensity, frequency, and potential difference.
 
-![Experimental Setup](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Photoelectric_effect_measurement_apparatus.svg/640px-Photoelectric_effect_measurement_apparatus.svg.png)
+![Experimental Setup](./media/Fig1.jpg)
 *(Figure 1: Basic experimental arrangement showing the vacuum tube, photosensitive plate, and collector)*
 
 **The Setup consists of:**
@@ -103,7 +103,7 @@ $$V_0 = \left( \frac{h}{e} \right)f - \left( \frac{\Phi_0}{e} \right)$$
 This section connects the math to the visual data.
 
 ### Graph 1: Kinetic Energy vs. Frequency
-![Kinetic Energy Graph](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Photoelectric_effect_in_a_solid_-_diagram_of_energy_levels.svg/640px-Photoelectric_effect_in_a_solid_-_diagram_of_energy_levels.svg.png)
+![Kinetic Energy Graph](./media/KE-vs-Frequency.jpg)
 *(Note: A standard KE vs Frequency graph is linear with an X-intercept)*
 
 * **Description:** A straight line that does not pass through the origin.
