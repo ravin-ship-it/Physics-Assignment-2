@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Markdown Preview</title>
+
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- Markdown GitHub Style -->
+    <link href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            width: 100%;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .markdown-body {
+            font-family: system-ui, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="markdown-body">
+    <div id="content">Loading markdown...</div>
+
+    <script>
+        // Enable math rendering after markdown is inserted
+        function renderMath() {
+            renderMathInElement(document.getElementById("content"), {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        }
+
+        // Load markdown file
+        fetch("./Assignment 2.md")
+            .then(response => response.text())
+            .then(text => {
+                // Convert markdown → HTML
+                document.getElementById("content").innerHTML = marked.parse(text);
+
+                // Render LaTeX
+                renderMath();
+            });
+    </script>
+</body>
+
+</html>
